@@ -1,0 +1,14 @@
+{
+  "configurations": [
+  {
+    "name": "Launch Program",
+    "program": "${workspaceFolder}/test.mjs",
+    "request": "launch",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "runtimeArgs": ["--experimental-wasm-simd", "--wasm-simd-post-mvp"],
+    "type": "pwa-node"
+  }
+  ]
+}

@@ -1,0 +1,24 @@
+interface ZStream {
+  void ZStream();
+  any getPtr();
+  any getNextOut();
+  any getNextIn();
+  void setNextOut(any nextOut);
+  void setNextIn(any nextIn);
+  unsigned long getAvailIn();
+  unsigned long getAvailOut();
+  void setAvailIn(unsigned long availIn);
+  void setAvailOut(unsigned long availOut);
+  long getDataType(); 
+  DOMString getErrMsg();
+};
+
+interface z_stream {
+  void z_stream();
+  attribute any next_in;
+  attribute any next_out;
+  attribute unsigned long avail_in;
+  attribute unsigned long avail_out;
+  attribute DOMString msg;
+  attribute long data_type;
+};

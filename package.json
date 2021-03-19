@@ -1,0 +1,14 @@
+{
+  "name": "zlib-ng-wasm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "arseneyr <arseneyr@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "wabt": "^1.0.21-nightly.20210306"
+  },
+  "scripts": {
+    "build": "docker run --rm -v $(pwd):/src -v emcache:/emcache -e 'EM_CACHE=/emcache' -w /src emscripten/emsdk:2.0.12 make",
+    "clean": "docker run --rm -v $(pwd):/src -w /src emscripten/emsdk:2.0.12 make clean && docker volume rm emcache"
+  }
+}
